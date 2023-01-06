@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn run lint
-yarn run test
+chmod ug+x .husky/*
+chmod ug+x .git/hooks/*
+
+yarn run lint && yarn run format && yarn run test --watch=false

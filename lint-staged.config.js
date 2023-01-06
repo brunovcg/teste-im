@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{js,jsx,ts,tsx}': () => ['npm run format', 'npm run validate'],
+  '*.{js,jsx,ts,tsx}': () => ['yarn run format', 'yarn run validate'],
 };
