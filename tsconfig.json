@@ -30,6 +30,6 @@
       "@/services/*": ["*", "src/services/*"]
     }
   },
-  "include": ["src", "./src/tests/setup.ts"],
+  "include": ["src", "tests/setup.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,7 +1,7 @@
 {
   "extends": [
     "eslint:recommended",
-    "airbnb",
+    "airbnb-typescript",
     "plugin:react/recommended",
     "plugin:security/recommended",
     "plugin:import/recommended",
@@ -25,6 +25,7 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": ["./tsconfig.json"],
     "ecmaFeatures": {
       "jsx": false
     },
@@ -32,7 +33,6 @@
     "sourceType": "module"
   },
   "rules": {
-    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "multiline-ternary": ["error", "always-multiline"],
@@ -73,7 +73,7 @@
         "offsetTernaryExpressions": true
       }
     ],
-    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".ts"] }],
     "jsx-a11y/no-static-element-interactions": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "jsx-a11y/click-events-have-key-events": "off",
@@ -83,7 +83,20 @@
     "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default-member": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "": "never",
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   }
 }
 
