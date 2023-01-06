@@ -1,26 +1,38 @@
 {
   "extends": [
     "eslint:recommended",
+    "airbnb",
     "plugin:react/recommended",
+    "plugin:security/recommended",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     // Make sure it's always the last config, so it gets the chance to override other configs.
     "eslint-config-prettier"
   ],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "@typescript-eslint", "security", "react-prefer-function-component"],
   "settings": {
     "react": {
       "version": "detect"
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"],
+        "paths": [""],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
   "rules": {
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "multiline-ternary": ["error", "always-multiline"],
@@ -61,12 +73,17 @@
         "offsetTernaryExpressions": true
       }
     ],
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
     "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "jsx-a11y/click-events-have-key-events": "off",
+    "no-unused-vars": 1,
+    "@typescript-eslint/no-unused-vars": ["warn"],
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
+    "no-plusplus": "off"
   }
 }
 

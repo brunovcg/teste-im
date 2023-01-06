@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,json,ts,tsx,css,scss,md}\"",
+    "validate": "run-p lint type:check format:check"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
@@ -36,6 +37,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
@@ -53,10 +56,13 @@
     "@vitejs/plugin-react": "^3.0.0",
     "babel-loader": "^8.3.0",
     "eslint": "^8.31.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-prefer-function-component": "^3.1.0",
+    "eslint-plugin-security": "^1.5.0",
     "husky": "^8.0.3",
     "jsdom": "^20.0.3",
     "lint-staged": "^13.1.0",
@@ -72,10 +78,5 @@
     "src/**/*.{js, jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
