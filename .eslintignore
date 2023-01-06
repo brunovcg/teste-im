@@ -3,3 +3,5 @@ dist/
 .prettierrc.js
 .eslintrc.js
 env.d.ts
+commitlint.config.js
+lint-staged.config.js
