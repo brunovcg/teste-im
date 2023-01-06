@@ -1,6 +1,5 @@
 function Home() {
-  // const a = 5;
-  return <div>hello</div>;
+  return <div>home</div>;
 }
 
 export default Home;
