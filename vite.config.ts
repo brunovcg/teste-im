@@ -2,8 +2,10 @@
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import dns from 'dns';
 
-// https://vitejs.dev/config/
+dns.setDefaultResultOrder('verbatim');
+
 export default defineConfig({
   plugins: [react()],
   test: {
@@ -14,7 +16,8 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
+
   server: {
-    port: 3000,
+    port: 4200,
   },
 });

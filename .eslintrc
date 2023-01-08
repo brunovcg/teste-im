@@ -78,7 +78,7 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "jsx-a11y/click-events-have-key-events": "off",
-    "no-unused-vars": 1,
+    "no-unused-vars": 0,
     "@typescript-eslint/no-unused-vars": ["warn"],
     "react/jsx-props-no-spreading": "off",
     "prefer-arrow-callback": "off",
@@ -87,6 +87,7 @@
     "import/no-named-as-default-member": "off",
     "arrow-body-style": ["error", "as-needed"],
     "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "@typescript-eslint/default-param-last": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
