@@ -1,15 +1,23 @@
 import StyledHome from './Home.styled';
-// import useQueryLogin from '@/queries/user-queries/useMutationLogin';
 import { useState } from 'react';
 import { UserLoginServicePayload } from '@/services/user-services/userServices.types';
 import { useUserDataContext } from '@/context/user-context/userContext';
+import { httpHelpers } from '@/helpers';
+import { AxiosResponse } from 'axios';
 
 function Home() {
   const [payload, setPayload] = useState<UserLoginServicePayload>({} as UserLoginServicePayload);
+  const { userData, setUserData } = useUserDataContext();
 
-  // const { mutate: getInfo } = useQueryLogin();
-  const handleClick = () => console.log(payload);
-  const { userData } = useUserDataContext();
+  const handleClick = () => {
+    httpHelpers
+      .request({ baseURL: 'http://localhost:8080', url: '/login', method: 'post', payload })
+      .then((res: AxiosResponse) => {
+        setUserData(res.data);
+        console.log(res.data);
+      })
+      .catch((error) => console.log(error.data));
+  };
 
   return (
     <StyledHome>

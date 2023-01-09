@@ -1,4 +1,4 @@
-import axiosHelpers from '@/helpers/axios-helpers/axiosHelpers';
+import axiosHelpers from '@/src/helpers/http-helpers/httpHelpers';
 import { UserLoginServicePayload } from './userServices.types';
 import { servicesBaseURL } from '../';
 
