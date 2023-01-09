@@ -2,7 +2,7 @@ import urlHelpers from '@/helpers/url-helpers/urlHelpers';
 
 const imConfigs = {
   localStorageKeys: {
-    userInfo: 'im:user-data',
+    userInfo: 'IM:user-data',
   },
 
   servicesBaseURL: {
