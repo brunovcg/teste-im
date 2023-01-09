@@ -17,4 +17,3 @@ const imConstants = {
 };
 
 export default imConstants;
-
