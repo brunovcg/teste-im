@@ -16,8 +16,9 @@ const StyledFieldInput = styled.div<StyledFieldInputProps>`
   }
 
   .im-field-input-header {
-    height: 20px;
+    height: 25px;
     justify-content: space-between;
+    margin-bottom: 5px;
     .im-field-input-label {
       font-size: 14px;
       font-weight: bold;
@@ -115,4 +116,3 @@ const StyledFieldInput = styled.div<StyledFieldInputProps>`
 `;
 
 export default StyledFieldInput;
-

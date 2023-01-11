@@ -17,4 +17,5 @@ export interface ButtonIconProps extends StyledButtonIconProps {
   notifications?: number;
   error?: boolean;
   disabled?: boolean;
+  notificationMargin?: string;
 }

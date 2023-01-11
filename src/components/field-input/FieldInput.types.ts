@@ -14,4 +14,3 @@ export interface FieldInputProps extends StyledFieldInputProps {
   onSearch?: (inputValue: string) => void;
   info?: string;
 }
-

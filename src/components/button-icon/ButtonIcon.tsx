@@ -16,7 +16,21 @@ function ButtonIcon({
   error,
   disabled,
   hide,
+  notificationMargin,
 }: ButtonIconProps) {
+  const setMargin = () => {
+    if (notificationMargin) {
+      return notificationMargin;
+    }
+    if (size === 'small') {
+      return '-9px 0 0 18px';
+    }
+    if (size === 'medium') {
+      return '-5px 0 0 18px';
+    }
+    return '-3px 0 0 18px';
+  };
+
   return (
     <StyledButtonIcon
       hoverBackgroundColor={hoverBackgroundColor}
@@ -28,7 +42,7 @@ function ButtonIcon({
       hide={hide}
     >
       <Icon hoverColor={hoverColor} size={size} icon={icon} error={error} disabled={disabled} color={color} margin={margin} />
-      <NotificationBubble quantity={notifications ?? 0} />
+      <NotificationBubble quantity={notifications ?? 0} margin={setMargin()} />
     </StyledButtonIcon>
   );
 }

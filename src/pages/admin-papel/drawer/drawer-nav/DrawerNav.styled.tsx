@@ -38,6 +38,9 @@ const StyledDrawerNav = styled.nav`
       visibility: hidden;
       transition: visibility 0.8s;
     }
+    .im-drawer-section-title {
+      text-align: center;
+    }
   }
   .im-drawer-module-name,
   .im-drawer-dashboard-name {
@@ -67,6 +70,7 @@ const StyledDrawerNav = styled.nav`
       font-weight: bold;
       font-size: 12px;
       color: var(--typeface-dark);
+      text-align: center;
     }
 
     ul {
@@ -94,7 +98,7 @@ const StyledDrawerNav = styled.nav`
         }
 
         .im-drawer-module-name {
-          color: var(--typeface-medium);
+          color: var(--typeface-light);
           font-size: 1.1rem;
         }
       }

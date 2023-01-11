@@ -8,7 +8,8 @@ const StyledHeader = styled.div`
   justify-content: space-between;
 
   .im-module-title {
-    color: var(--typeface-medium);
+    color: var(--typeface-light);
+    width: 300px;
   }
 
   .im-header-left-wrapper {

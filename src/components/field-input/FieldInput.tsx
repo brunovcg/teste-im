@@ -13,7 +13,7 @@ function FieldInput({
   label,
   placeholder,
   errorMessage,
-  injectableClass,
+  injectableClass = '',
   maxLength,
   info,
   disabled = false,
@@ -116,4 +116,3 @@ function FieldInput({
 }
 
 export default FieldInput;
-
