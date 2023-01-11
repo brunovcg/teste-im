@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { IconSize } from '../icon/Icon.types';
 import { StyledButtonIconProps } from './ButtonIcon.types';
 
 const getDimension = (size: IconSize) => {
   const sizes = {
     small: '30px',
-    medium: '40px',
-    large: '50px;',
+    medium: '35px',
+    large: '40px;',
   };
 
   return sizes[(size as keyof object) ?? 'small'];
@@ -14,6 +14,7 @@ const getDimension = (size: IconSize) => {
 
 const StyledButtonIcon = styled.button<StyledButtonIconProps>`
   display: flex;
+  visibility: ${(props) => (props.hide ? 'hidden' : 'visible')};
   justify-content: center;
   align-items: center;
   border: none;
@@ -24,8 +25,14 @@ const StyledButtonIcon = styled.button<StyledButtonIconProps>`
   height: ${(props) => getDimension(props.size ?? 'small')};
   position: relative;
 
+  ${(props) =>
+    (props.disabled || props.hide) &&
+    css`
+      cursor: default;
+    `}
+
   &:hover {
-    background-color: var(--surface-dark);
+    background-color: ${(props) => props.hoverBackgroundColor};
   }
 `;
 

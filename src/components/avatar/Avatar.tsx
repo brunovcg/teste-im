@@ -20,4 +20,3 @@ function Avatar({ src, name, size, onClick }: AvatarProps) {
 }
 
 export default Avatar;
-

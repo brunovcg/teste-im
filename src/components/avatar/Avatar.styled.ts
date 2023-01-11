@@ -31,4 +31,3 @@ const StyledAvatar = styled.div<StyledAvatarProps>`
 `;
 
 export default StyledAvatar;
-

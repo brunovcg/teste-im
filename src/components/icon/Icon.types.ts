@@ -1,15 +1,16 @@
-export type IconSize = 'small' | 'medium' | 'large';
+export type IconSize = 'small' | 'medium' | 'large' | undefined;
 
-export type IconProps = {
-  icon: string;
+export interface StyledIconProps {
   size?: IconSize;
-  color?: string;
   margin?: string;
+  hoverColor?: string;
+  disabled?: boolean;
+  error?: boolean;
+}
+
+export interface IconProps extends StyledIconProps {
+  icon: string;
+  color?: string;
   injectClass?: string;
   notifications?: number;
-};
-
-export type StyledIconProps = {
-  size: IconSize;
-  margin: string;
-};
+}

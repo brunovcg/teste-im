@@ -7,4 +7,3 @@ export interface AvatarProps extends StyledAvatarProps {
   src: string;
   onClick?: () => void;
 }
-

@@ -10,6 +10,9 @@ export const enUS = {
       Reports: 'Reports',
       ScriptsRunner: 'Scripts Runner',
     },
+    Header: {
+      Search: 'Search',
+    },
   },
   Commom: {
     InvestorMachine: 'Investor Machine',
@@ -17,6 +20,9 @@ export const enUS = {
   Components: {
     Avatar: {
       Name: 'User name',
+    },
+    InputField: {
+      Characters: 'remaining: ',
     },
   },
 };

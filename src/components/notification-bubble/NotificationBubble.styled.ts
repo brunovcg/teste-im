@@ -15,6 +15,16 @@ const StyledNotificationBubble = styled.div<NotificationBubbleStyledProps>`
   position: absolute;
   top: 0;
   margin: ${(props) => props.margin};
+
+  &.im-notification-large {
+    width: 35px;
+    border-radius: 30px;
+    margin: 0 0 0 30px;
+  }
+
+  &.im-no-notifications {
+    display: none;
+  }
 `;
 
 export default StyledNotificationBubble;
