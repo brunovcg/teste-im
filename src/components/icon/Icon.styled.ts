@@ -3,9 +3,9 @@ import { StyledIconProps, IconSize } from './Icon.types';
 
 const getSize = (size: IconSize) => {
   const sized = {
-    small: '16px',
-    medium: '22px',
-    large: '26px',
+    small: '20px',
+    medium: '25px',
+    large: '30px',
   };
 
   return sized[(size as keyof object) ?? 'small'];

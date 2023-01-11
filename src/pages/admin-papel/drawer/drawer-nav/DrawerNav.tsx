@@ -60,7 +60,7 @@ function DrawerNav({ isCollapsedDrawer, selectedModule, setSelectedModule }: Dra
         className="im-drawer-dashboard im-drawer-module"
         role="button"
       >
-        <Icon icon="dashboard" size="large" injectClass="im-drawer-dashboard-icon" margin="0 0 2px 0" />
+        <Icon icon="dashboard" size="medium" injectClass="im-drawer-dashboard-icon" margin="0 0 2px 0" />
         <h3 className="im-drawer-dashboard-name">{t('AdminPanel.Drawer.Dashboard')}</h3>
       </div>
       {menu.map((item) => (
@@ -75,7 +75,7 @@ function DrawerNav({ isCollapsedDrawer, selectedModule, setSelectedModule }: Dra
                 role="button"
                 title={subitem.name}
               >
-                <Icon size="large" icon={subitem.icon} color="var(--typeface-light)" injectClass="im-drawer-module-icon" />
+                <Icon size="medium" icon={subitem.icon} color="var(--typeface-light)" injectClass="im-drawer-module-icon" />
                 <p className="im-drawer-module-name">{subitem.name}</p>
               </li>
             ))}

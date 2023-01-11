@@ -33,6 +33,12 @@ const StyledDrawer = styled.div`
       margin-top: 4px;
       margin-right: -12px;
       opacity: 0%;
+      &:hover {
+        background-color: var(--primary);
+        .im-icon {
+          color: white !important;
+        }
+      }
     }
   }
 
