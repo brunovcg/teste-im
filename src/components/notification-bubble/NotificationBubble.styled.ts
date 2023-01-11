@@ -18,4 +18,3 @@ const StyledNotificationBubble = styled.div<NotificationBubbleStyledProps>`
 `;
 
 export default StyledNotificationBubble;
-

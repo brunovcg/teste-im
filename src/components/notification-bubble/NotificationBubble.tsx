@@ -6,4 +6,3 @@ function NotificationBubble({ number, margin = '0 0 0 18px' }: NotificationBubbl
 }
 
 export default NotificationBubble;
-

@@ -19,4 +19,3 @@ const StyledIcon = styled.span<StyledIconProps>`
 `;
 
 export default StyledIcon;
-

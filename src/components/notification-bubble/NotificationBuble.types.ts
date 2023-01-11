@@ -5,4 +5,3 @@ export interface NotificationBubbleStyledProps {
 export interface NotificationBubbleProps extends NotificationBubbleStyledProps {
   number: number;
 }
-

@@ -9,4 +9,3 @@ function Icon({ icon, size = 'small', color = 'var(--typeface-dark)', margin = '
 }
 
 export default Icon;
-

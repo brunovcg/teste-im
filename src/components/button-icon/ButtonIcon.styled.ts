@@ -24,7 +24,6 @@ const StyledButtonIcon = styled.button<StyledButtonIconProps>`
   height: ${(props) => getDimension(props.size ?? 'small')};
   position: relative;
 
-
   &:hover {
     background-color: var(--surface-dark);
   }
