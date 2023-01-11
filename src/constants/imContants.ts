@@ -14,6 +14,13 @@ const imConstants = {
     NOT_IMPLEMENTED: 501,
     BAD_GATEWAY: 502,
   },
+
+  enviroments: {
+    PRODUCTION: 'production',
+    REVIEW: 'Review',
+    STAGING: 'Staging',
+    DEVLOPMENT: 'Development',
+  },
 };
 
 export default imConstants;

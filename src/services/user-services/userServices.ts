@@ -1,13 +1,13 @@
 import axiosHelpers from '@/src/helpers/http-helpers/httpHelpers';
 import { UserLoginServicePayload } from './userServices.types';
-import { servicesBaseURL } from '../';
+import imConfigs from '@/configs/imConfigs';
 
 const { request } = axiosHelpers;
-const baseURL = servicesBaseURL.userService;
+const baseURL = imConfigs.servicesBaseURL.userService;
 
 const userServices = {
   login(payload: UserLoginServicePayload) {
-    return request({ baseURL, url: '/login' }).post(payload);
+    return request({ baseURL, url: '/login', method: 'get', payload });
   },
 };
 

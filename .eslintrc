@@ -88,6 +88,8 @@
     "arrow-body-style": ["error", "as-needed"],
     "react/self-closing-comp": ["error", { "component": true, "html": true }],
     "@typescript-eslint/default-param-last": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

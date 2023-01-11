@@ -17,7 +17,7 @@ export default function StorageProvider({ children }: StorageContextProviderProp
       setLocalStorageState((state: object) => ({ ...state, [key]: entry }));
       localStorage.setItem(key, JSON.stringify(entry));
     },
-    [localStorageState]
+    [localStorageState, setLocalStorageState]
   );
 
   const setSessionStorageItem = useCallback(
@@ -25,7 +25,7 @@ export default function StorageProvider({ children }: StorageContextProviderProp
       setsessionStorageState((state: object) => ({ ...state, [key]: entry }));
       sessionStorage.setItem(key, JSON.stringify(entry));
     },
-    [sessionStorageState]
+    [sessionStorageState, setsessionStorageState]
   );
 
   const getLocalStorageItem = useCallback((key: string): Keyable => localStorageState[key as keyof object], [localStorageState]);

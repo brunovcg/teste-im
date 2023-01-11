@@ -7,8 +7,12 @@ import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import i18n from './locale/i18n';
 import StorageProvider from '@/context/storage-context/StorageContext';
+import GlobalStyle from './styles/GlobalStyles';
+import getEviroment from '@/configs/enviroments';
+import imConstants from './constants/imContants';
 
 const queryClient = new QueryClient();
+const { PRODUCTION } = imConstants.enviroments;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -17,7 +21,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <BrowserRouter>
           <QueryClientProvider client={queryClient}>
             <App />
-            <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+            <GlobalStyle />
+            {getEviroment().name !== PRODUCTION && <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />}
           </QueryClientProvider>
         </BrowserRouter>
       </StorageProvider>

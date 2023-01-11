@@ -29,6 +29,7 @@ const httpHelpers = {
     client.interceptors.response.use((response): any => {
       const formatedResponse = formatResponse(response);
       if (![OK, CREATED, ACCEPTED, NO_CONTENT].includes(formatedResponse.status)) {
+        console.error('failed');
         throw new RequestException('Failed', formatedResponse);
       }
       return formatedResponse;

@@ -20,7 +20,7 @@ function Home() {
   };
 
   return (
-    <StyledHome>
+    <StyledHome className="im-home">
       <h1>HOME</h1>
       xx={JSON.stringify(getLocalStorageItem?.('IM:user-info')?.username)}
       <br />
