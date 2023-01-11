@@ -10,7 +10,13 @@ function Header({ module }: AdminPanelHeaderProps) {
       <h1 className="im-module-title">{module}</h1>
       <FieldInput onChange={(e) => console.log(e)} placeholder={t('AdminPanel.Header.Search')} width="300px" />
       <div className="im-header-left-wrapper">
-        <ButtonIcon hoverColor="var(--typeface-medium)" color="var(--typeface-light)" icon="notifications" size="medium" notifications={2} />
+        <ButtonIcon
+          hoverColor="var(--typeface-medium)"
+          color="var(--typeface-light)"
+          icon="notifications"
+          size="medium"
+          notifications={2}
+        />
         <ButtonIcon hoverColor="var(--typeface-medium)" color="var(--typeface-light)" icon="mail" size="medium" />
         <Avatar
           src="https://www.w3schools.com/howto/img_avatar2.png"
